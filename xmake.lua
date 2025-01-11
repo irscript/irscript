@@ -8,6 +8,7 @@ target("main")
     set_kind("binary")
     add_files("main.cpp")
     add_deps("irscript")
+    
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --

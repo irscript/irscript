@@ -14,24 +14,24 @@ namespace irscript
 
     // 整数
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(int8, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Int8, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(int16, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Int16, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(int32, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Int32, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(int64, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Int64, ValueType)
 
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(uint8, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Uint8, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(uint16, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Uint16, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(uint32, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Uint32, ValueType)
     template <>
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(uint64, ValueType)
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Uint64, ValueType)
 
     // 浮点数
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(flt32, ValueType);
-    IRSCRIPT_IMPLEMENT_VALUE_TYPE(flt64, ValueType);
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Flt32, ValueType);
+    IRSCRIPT_IMPLEMENT_VALUE_TYPE(Flt64, ValueType);
 }

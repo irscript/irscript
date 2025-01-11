@@ -7,16 +7,10 @@ namespace irscript
     // 值类型
     struct ValueType : Thing
     {
-        inline static const RTTI &getRTTI() { return _rtti_; }
+        IRSCRIPT_DEFINE_TYPE(Thing)
 
     protected:
         ValueType() = default;
-        enum
-        {
-            _inherit_ = Thing::_inherit_ + 1
-        };
-
-        const static RTTI _rtti_;
     };
 
 // 声明值类型

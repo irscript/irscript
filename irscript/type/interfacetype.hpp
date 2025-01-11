@@ -6,16 +6,10 @@ namespace irscript
     // 接口类型
     struct InterfaceType : Thing
     {
-        inline static const RTTI &getRTTI() { return _rtti_; }
+        IRSCRIPT_DEFINE_TYPE(Thing)
 
     protected:
         InterfaceType() = default;
-        enum
-        {
-            _inherit_ = Thing::_inherit_ + 1
-        };
-
-        const static RTTI _rtti_;
     };
 
 // 声明接口类型

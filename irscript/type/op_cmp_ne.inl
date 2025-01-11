@@ -1,0 +1,151 @@
+   
+#define op_cmp_ne(x, y) \
+    inline bool operator!=(const x &lhs, const y &rhs) { return lhs.value != rhs.value; }
+
+    op_cmp_ne(Int8, Int8)
+        op_cmp_ne(Int8, Int16)
+            op_cmp_ne(Int8, Int32)
+                op_cmp_ne(Int8, Int64)
+                    op_cmp_ne(Int8, Uint8)
+                        op_cmp_ne(Int8, Uint16)
+                            op_cmp_ne(Int8, Uint32)
+                                op_cmp_ne(Int8, Uint64);
+    op_cmp_ne(Int16, Int8)
+        op_cmp_ne(Int16, Int16)
+            op_cmp_ne(Int16, Int32)
+                op_cmp_ne(Int16, Int64)
+                    op_cmp_ne(Int16, Uint8)
+                        op_cmp_ne(Int16, Uint16)
+                            op_cmp_ne(Int16, Uint32)
+                                op_cmp_ne(Int16, Uint64);
+    op_cmp_ne(Int32, Int8)
+        op_cmp_ne(Int32, Int16)
+            op_cmp_ne(Int32, Int32)
+                op_cmp_ne(Int32, Int64)
+                    op_cmp_ne(Int32, Uint8)
+                        op_cmp_ne(Int32, Uint16)
+                            op_cmp_ne(Int32, Uint32)
+                                op_cmp_ne(Int32, Uint64);
+    op_cmp_ne(Int64, Int8)
+        op_cmp_ne(Int64, Int16)
+            op_cmp_ne(Int64, Int32)
+                op_cmp_ne(Int64, Int64)
+                    op_cmp_ne(Int64, Uint8)
+                        op_cmp_ne(Int64, Uint16)
+                            op_cmp_ne(Int64, Uint32)
+                                op_cmp_ne(Int64, Uint64);
+    op_cmp_ne(Uint8, Int8)
+        op_cmp_ne(Uint8, Int16)
+            op_cmp_ne(Uint8, Int32)
+                op_cmp_ne(Uint8, Int64)
+                    op_cmp_ne(Uint8, Uint8)
+                        op_cmp_ne(Uint8, Uint16)
+                            op_cmp_ne(Uint8, Uint32)
+                                op_cmp_ne(Uint8, Uint64);
+    op_cmp_ne(Uint16, Int8)
+        op_cmp_ne(Uint16, Int16)
+            op_cmp_ne(Uint16, Int32)
+                op_cmp_ne(Uint16, Int64)
+                    op_cmp_ne(Uint16, Uint8)
+                        op_cmp_ne(Uint16, Uint16)
+                            op_cmp_ne(Uint16, Uint32)
+                                op_cmp_ne(Uint16, Uint64);
+    op_cmp_ne(Uint32, Int8)
+        op_cmp_ne(Uint32, Int16)
+            op_cmp_ne(Uint32, Int32)
+                op_cmp_ne(Uint32, Int64)
+                    op_cmp_ne(Uint32, Uint8)
+                        op_cmp_ne(Uint32, Uint16)
+                            op_cmp_ne(Uint32, Uint32)
+                                op_cmp_ne(Uint32, Uint64);
+    op_cmp_ne(Uint64, Int8)
+        op_cmp_ne(Uint64, Int16)
+            op_cmp_ne(Uint64, Int32)
+                op_cmp_ne(Uint64, Int64)
+                    op_cmp_ne(Uint64, Uint8)
+                        op_cmp_ne(Uint64, Uint16)
+                            op_cmp_ne(Uint64, Uint32)
+                                op_cmp_ne(Uint64, Uint64);
+
+    op_cmp_ne(Flt32, Flt32)
+        op_cmp_ne(Flt32, Flt64);
+
+    op_cmp_ne(Flt64, Flt32)
+        op_cmp_ne(Flt64, Flt64);
+#undef op_cmp_ne
+
+#define op_cmp_ne(x, y)                                                             \
+    inline bool operator!=(const x &lhs, const y &rhs) { return lhs.value != rhs; } \
+    inline bool operator!=(const y &lhs, const x &rhs) { return lhs != rhs.value; }
+
+    op_cmp_ne(Int8, int8_t)
+        op_cmp_ne(Int8, int16_t)
+            op_cmp_ne(Int8, int32_t)
+                op_cmp_ne(Int8, int64_t)
+                    op_cmp_ne(Int8, uint8_t)
+                        op_cmp_ne(Int8, uint16_t)
+                            op_cmp_ne(Int8, uint32_t)
+                                op_cmp_ne(Int8, uint64_t);
+    op_cmp_ne(Int16, int8_t)
+        op_cmp_ne(Int16, int16_t)
+            op_cmp_ne(Int16, int32_t)
+                op_cmp_ne(Int16, int64_t)
+                    op_cmp_ne(Int16, uint8_t)
+                        op_cmp_ne(Int16, uint16_t)
+                            op_cmp_ne(Int16, uint32_t)
+                                op_cmp_ne(Int16, uint64_t);
+    op_cmp_ne(Int32, int8_t)
+        op_cmp_ne(Int32, int16_t)
+            op_cmp_ne(Int32, int32_t)
+                op_cmp_ne(Int32, int64_t)
+                    op_cmp_ne(Int32, uint8_t)
+                        op_cmp_ne(Int32, uint16_t)
+                            op_cmp_ne(Int32, uint32_t)
+                                op_cmp_ne(Int32, uint64_t);
+    op_cmp_ne(Int64, int8_t)
+        op_cmp_ne(Int64, int16_t)
+            op_cmp_ne(Int64, int32_t)
+                op_cmp_ne(Int64, int64_t)
+                    op_cmp_ne(Int64, uint8_t)
+                        op_cmp_ne(Int64, uint16_t)
+                            op_cmp_ne(Int64, uint32_t)
+                                op_cmp_ne(Int64, uint64_t);
+    op_cmp_ne(Uint8, int8_t)
+        op_cmp_ne(Uint8, int16_t)
+            op_cmp_ne(Uint8, int32_t)
+                op_cmp_ne(Uint8, int64_t)
+                    op_cmp_ne(Uint8, uint8_t)
+                        op_cmp_ne(Uint8, uint16_t)
+                            op_cmp_ne(Uint8, uint32_t)
+                                op_cmp_ne(Uint8, uint64_t);
+    op_cmp_ne(Uint16, int8_t)
+        op_cmp_ne(Uint16, int16_t)
+            op_cmp_ne(Uint16, int32_t)
+                op_cmp_ne(Uint16, int64_t)
+                    op_cmp_ne(Uint16, uint8_t)
+                        op_cmp_ne(Uint16, uint16_t)
+                            op_cmp_ne(Uint16, uint32_t)
+                                op_cmp_ne(Uint16, uint64_t);
+    op_cmp_ne(Uint32, int8_t)
+        op_cmp_ne(Uint32, int16_t)
+            op_cmp_ne(Uint32, int32_t)
+                op_cmp_ne(Uint32, int64_t)
+                    op_cmp_ne(Uint32, uint8_t)
+                        op_cmp_ne(Uint32, uint16_t)
+                            op_cmp_ne(Uint32, uint32_t)
+                                op_cmp_ne(Uint32, uint64_t);
+    op_cmp_ne(Uint64, int8_t)
+        op_cmp_ne(Uint64, int16_t)
+            op_cmp_ne(Uint64, int32_t)
+                op_cmp_ne(Uint64, int64_t)
+                    op_cmp_ne(Uint64, uint8_t)
+                        op_cmp_ne(Uint64, uint16_t)
+                            op_cmp_ne(Uint64, uint32_t)
+                                op_cmp_ne(Uint64, uint64_t);
+
+    op_cmp_ne(Flt32, float)
+        op_cmp_ne(Flt32, double);
+
+    op_cmp_ne(Flt64, float)
+        op_cmp_ne(Flt64, double);
+#undef op_cmp_ne

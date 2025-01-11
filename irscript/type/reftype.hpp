@@ -7,17 +7,11 @@ namespace irscript
     // 引用类型
     struct RefType : Thing
     {
-        inline static const RTTI &getRTTI() { return _rtti_; }
+        IRSCRIPT_DEFINE_TYPE(Thing)
 
     protected:
         RefType() = default;
         virtual ~RefType() = default;
-        enum
-        {
-            _inherit_ = Thing::_inherit_ + 1
-        };
-
-        const static RTTI _rtti_;
     };
 
 // 声明引用类型
